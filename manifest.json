@@ -1,24 +1,11 @@
 {
-    "manifest_version":3,
-    "name":"Youtubr video downloader",
-    "description":"Simple way to download video",
-    "version":"2.0",
-    "author":"jonty",
-    "web_accessible_resources":[
-        {
-            "resources":["src/chrome.js"],
-            "matches":["<all_urls>"]
-    }],
-    "icons":
-    {
-        "48":"icon48.png",
-        "128":"icon128.png"
+    "name":"My First Extension",
+    "description":"Show a menu list",
+    "version":"0.21",
+    "permissions":["contextMenus"],
+    "background":{
+        "service_worker":"background.js",
+        "type":"module"
     },
-    "content_scripts":[
-        {
-            "matches":["https://www.youtube.com/watch*"],
-            "js":["src/tube.js"]
-        }
-    ]
-    
+    "manifest_version":3
 }
