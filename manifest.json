@@ -1,11 +1,12 @@
 {
+    "manifest_version":3,
     "name":"My First Extension",
     "description":"Show a menu list",
     "version":"0.21",
-    "permissions":["contextMenus"],
+    "permissions":["contextMenus","activeTab"],
     "background":{
         "service_worker":"background.js",
         "type":"module"
-    },
-    "manifest_version":3
+    }
+    
 }

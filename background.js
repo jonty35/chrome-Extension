@@ -1,12 +1,18 @@
 
 
 
-function MyGenericClick(info,tab)
-{
-    console.log("clicked on page :", info,tab)
+function MyGenericClick(info, tab) {
+  console.log("clicked on page :", info, tab);
 }
 
+
+chrome.runtime.onInstalled.addListener(() =>{
 chrome.contextMenus.create({
-    "title":"share",
-    "onclick": MyGenericClick
-})
+    id:"my-checkbox",
+    title: "share",
+    contexts:["page"],
+
+});
+});
+
+chrome.contextMenus.onClicked.addListener(MyGenericClick);
