@@ -23,7 +23,5 @@ chrome.contextMenus.create({
 });
 });
 
-
-
 chrome.contextMenus.onClicked.addListener(MyGenericClick);
 chrome.contextMenus.onClicked.addListener(MyImageClick);
